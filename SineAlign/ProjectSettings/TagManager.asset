@@ -7,6 +7,7 @@ TagManager:
   - RingOfDoom
   - RingOfBloom
   - Collectable
+  - EndCube
   layers:
   - Default
   - TransparentFX

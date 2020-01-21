@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-
     [SerializeField]
     private float moveSpeed = 0.1f;
 
@@ -40,7 +39,6 @@ public class EnemyMovement : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        Debug.Log("Di je ovaj dio koda???");
         Debug.Log("Tag: " + enemy.tag);
         if (enemy.tag.Equals("RingOfDoom"))
         {

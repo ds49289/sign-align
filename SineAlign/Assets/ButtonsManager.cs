@@ -24,4 +24,19 @@ public class ButtonsManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void NextTutorialPage()
+    {
+        SceneManager.LoadScene("HowToPlay2");
+    }
+
+    public void PreviousTutorialPage()
+    {
+        SceneManager.LoadScene("HowToPlay1");
+    }
+
+    public void OptionsMenu()
+    {
+        SceneManager.LoadScene("OptionsMenu");
+    }
 }

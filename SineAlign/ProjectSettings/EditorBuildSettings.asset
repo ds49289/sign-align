@@ -11,4 +11,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Loser.unity
+    guid: 51bb934bd6a5e594cb81e2a70937083c
+  - enabled: 1
+    path: Assets/Scenes/Winner.unity
+    guid: b6ea5a5264b03644fb01b1d45c85b189
+  - enabled: 1
+    path: Assets/Scenes/HowToPlay1.unity
+    guid: 67dfce86711b49247b40cb3af60c540b
+  - enabled: 1
+    path: Assets/Scenes/HowToPlay2.unity
+    guid: 3bfead68077385840ac2cb47a63e0eab
+  - enabled: 1
+    path: Assets/Scenes/OptionsMenu.unity
+    guid: fa541a64d2155cf4b981144e08957a9f
   m_configObjects: {}
