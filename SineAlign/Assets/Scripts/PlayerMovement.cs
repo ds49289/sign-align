@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private float swipeStartFrequency;
     private float swipeStartAmplitude;
 
+    [SerializeField]
     public GameObject player;
     public Slider frequencySlider;
     public Slider amplitudeSlider;
