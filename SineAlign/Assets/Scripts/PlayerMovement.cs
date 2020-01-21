@@ -11,6 +11,9 @@ public class PlayerMovement : MonoBehaviour
     private float newFrequency;
     private float newAmplitude;
 
+    private float swipeStartFrequency;
+    private float swipeStartAmplitude;
+
     public GameObject player;
     public Slider frequencySlider;
     public Slider amplitudeSlider;
@@ -25,13 +28,23 @@ public class PlayerMovement : MonoBehaviour
 
     private CircleCollider2D collider;
 
+    public static event Action<SineWaveData> OnSineWaveChange = delegate { };
+
+
+    private void Awake()
+    {
+        SwipeDetector.OnSwipe += SwipeDetector_OnSwipe;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         collider = player.GetComponent(typeof(CircleCollider2D)) as CircleCollider2D;
         Debug.Log(collider);
         frequency = 2;
-        amplitude = 2;
+        amplitude = 4;
+        newFrequency = 2;
+        newAmplitude = 4;
         amplitudeSlider.value = amplitude;
         frequencySlider.value = frequency;
     }
@@ -40,16 +53,32 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        newFrequency = frequencySlider.value;
-        newAmplitude = amplitudeSlider.value;
+        //newFrequency = frequencySlider.value;
+        //newAmplitude = amplitudeSlider.value;
 
-        if (newFrequency != frequency)
-        {
-            CalcNewFrequency();
-        }
-
-        time += Time.deltaTime;
+        //if (newFrequency != frequency || amplitude != newAmplitude)
+        //{
+        //    if(newFrequency != frequency)
+        //    {
+        //        CalcNewFrequency();
+        //    }
+        //    amplitude = newAmplitude;            
+        //}
+        CalcNewFrequency();
         amplitude = newAmplitude;
+
+        
+        time += Time.deltaTime;
+
+        SineWaveData data = new SineWaveData()
+        {
+            amplitude = amplitude,
+            frequency = frequency,
+            phaseShift = phaseShift,
+            time = time
+        };
+        OnSineWaveChange(data);
+
 
         var newPosition = amplitude * Mathf.Sin(frequency * time + phaseShift);
 
@@ -65,4 +94,22 @@ public class PlayerMovement : MonoBehaviour
         frequency = newFrequency;
     }
 
+    private void SwipeDetector_OnSwipe(SwipeData data)
+    {
+        if (data.isNewSwipe)
+        {
+            swipeStartFrequency = frequency;
+            swipeStartAmplitude = amplitude;
+        }
+        newFrequency = Mathf.Clamp(swipeStartFrequency + data.frequencyAdd, 0.5f, Mathf.PI);
+        newAmplitude = Mathf.Clamp(swipeStartAmplitude + data.amplitudeAdd, 0.3f, 4);
+    }
+}
+
+public struct SineWaveData
+{
+    public float frequency;
+    public float amplitude;
+    public float phaseShift;
+    public float time;
 }
