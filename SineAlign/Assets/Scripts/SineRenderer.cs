@@ -8,6 +8,7 @@ public class SineRenderer : MonoBehaviour
     [SerializeField]
     private int numberOfPoints = 10;
 
+    public float waveWidth = 0.5f;
     public float length = 50;
     public float waveHeight = 10;
 
@@ -25,6 +26,8 @@ public class SineRenderer : MonoBehaviour
         lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
         lineRenderer.startColor = sineColor;
         lineRenderer.endColor = sineColor;
+        lineRenderer.startWidth = waveWidth;
+        lineRenderer.endWidth = waveWidth;
         var data = new SineWaveData()
         {
             amplitude = 4,

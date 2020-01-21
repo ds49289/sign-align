@@ -16,8 +16,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     public GameObject player;
-    public Slider frequencySlider;
-    public Slider amplitudeSlider;
+    //public Slider frequencySlider;
+    //public Slider amplitudeSlider;
 
     private float movementSpeed = 0.01f;
     //private float newFrequency;
@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     private float time = 0f;
     private float phaseShift = 0f;
 
-    private CircleCollider2D collider;
+    private SphereCollider collider;
 
     public static event Action<SineWaveData> OnSineWaveChange = delegate { };
 
@@ -40,23 +40,17 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        collider = player.GetComponent(typeof(CircleCollider2D)) as CircleCollider2D;
+        collider = player.GetComponent(typeof(SphereCollider)) as SphereCollider;
         Debug.Log(collider);
         frequency = 2;
         amplitude = 4;
         newFrequency = 2;
         newAmplitude = 4;
-        amplitudeSlider.value = amplitude;
-        frequencySlider.value = frequency;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        //newFrequency = frequencySlider.value;
-        //newAmplitude = amplitudeSlider.value;
-
         //if (newFrequency != frequency || amplitude != newAmplitude)
         //{
         //    if(newFrequency != frequency)
