@@ -16,14 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     public GameObject player;
-    //public Slider frequencySlider;
-    //public Slider amplitudeSlider;
 
-    private float movementSpeed = 0.01f;
-    //private float newFrequency;
-    private double movementFrequency;
-    private float newFrequency2;
-    private double sinValue;
     private float time = 0f;
     private float phaseShift = 0f;
 
@@ -41,7 +34,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         collider = player.GetComponent(typeof(SphereCollider)) as SphereCollider;
-        Debug.Log(collider);
         frequency = 2;
         amplitude = 4;
         newFrequency = 2;

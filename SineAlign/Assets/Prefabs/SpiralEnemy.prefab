@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1738934510925058744}
   m_Layer: 0
   m_Name: SpiralEnemy
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,4 +148,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.02
-  enemy: {fileID: 1739060401221540229}
+  ringOfDoomSpeedIncrease: 0.5
+  ringOfBloomSpeedDecrease: -0.5
