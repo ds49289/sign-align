@@ -14,6 +14,7 @@ public class EndBoxMovement : MonoBehaviour
     void Start()
     {
         enemy = GetComponent<Transform>();
+        SpeedChange += OnSpeedChange;
     }
 
     // Update is called once per frame
@@ -25,5 +26,10 @@ public class EndBoxMovement : MonoBehaviour
     private void PerformMovement()
     {
         enemy.position = new Vector3(enemy.transform.position.x - moveSpeed, enemy.transform.position.y, 0);
+    }
+
+    private void OnSpeedChange(float speedAdd)
+    {
+        moveSpeed += speedAdd;
     }
 }

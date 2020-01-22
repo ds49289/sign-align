@@ -634,11 +634,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 781049121}
     m_Modifications:
-    - target: {fileID: 1738934510925058746, guid: 7e1e4b4d20aa0e04a8c73968032d176f,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1739060401221540229, guid: 7e1e4b4d20aa0e04a8c73968032d176f,
         type: 3}
       propertyPath: m_Name
@@ -708,6 +703,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.24297991
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738934510925058746, guid: 7e1e4b4d20aa0e04a8c73968032d176f,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e1e4b4d20aa0e04a8c73968032d176f, type: 3}
@@ -6138,7 +6138,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728567241}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 75.66, y: 0, z: 0}
+  m_LocalPosition: {x: 87.35, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6156,7 +6156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f91fae1f04f714789b0f76ee495cbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.02
+  moveSpeed: 0.015
 --- !u!54 &728567247
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8113,15 +8113,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 680713303}
     m_Modifications:
-    - target: {fileID: 1554321899010294900, guid: b9165afb553434847933834ae45a79ff,
-        type: 3}
-      propertyPath: ringOfDoomSpeedIncrease
-      value: 0.005
-      objectReference: {fileID: 0}
     - target: {fileID: 4688400584211644970, guid: b9165afb553434847933834ae45a79ff,
         type: 3}
       propertyPath: m_Name
       value: RingOfDoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554321899010294900, guid: b9165afb553434847933834ae45a79ff,
+        type: 3}
+      propertyPath: ringOfDoomSpeedIncrease
+      value: 0.005
       objectReference: {fileID: 0}
     - target: {fileID: 4688400584211644981, guid: b9165afb553434847933834ae45a79ff,
         type: 3}
@@ -8177,6 +8177,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407312528955790662, guid: b9165afb553434847933834ae45a79ff,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9165afb553434847933834ae45a79ff, type: 3}
@@ -8266,15 +8271,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 680713303}
     m_Modifications:
-    - target: {fileID: 4208739561623936863, guid: 9cdc7494b24dd77408b0225e8664e0c0,
-        type: 3}
-      propertyPath: moveSpeed
-      value: 0.02
-      objectReference: {fileID: 0}
     - target: {fileID: 4507219949407971373, guid: 9cdc7494b24dd77408b0225e8664e0c0,
         type: 3}
       propertyPath: m_Name
       value: RingOfBloom
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208739561623936863, guid: 9cdc7494b24dd77408b0225e8664e0c0,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 4778318630848859942, guid: 9cdc7494b24dd77408b0225e8664e0c0,
         type: 3}
@@ -8341,6 +8346,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5912807361275323280, guid: 26a39d4f7ccb8f2478300d5309790c83,
+        type: 3}
+      propertyPath: m_Name
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912807361275323280, guid: 26a39d4f7ccb8f2478300d5309790c83,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4623975779138997114, guid: 26a39d4f7ccb8f2478300d5309790c83,
         type: 3}
       propertyPath: m_BodyType
@@ -8369,16 +8384,6 @@ PrefabInstance:
     - target: {fileID: 4623975779138997114, guid: 26a39d4f7ccb8f2478300d5309790c83,
         type: 3}
       propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912807361275323280, guid: 26a39d4f7ccb8f2478300d5309790c83,
-        type: 3}
-      propertyPath: m_Name
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912807361275323280, guid: 26a39d4f7ccb8f2478300d5309790c83,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5912807361275323282, guid: 26a39d4f7ccb8f2478300d5309790c83,

@@ -147,6 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd4578d4d24e783488aa7d1661c63658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.02
+  moveSpeed: 0.015
   ringOfDoomSpeedIncrease: 0.5
   ringOfBloomSpeedDecrease: -0.5

@@ -88,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
             swipeStartFrequency = frequency;
             swipeStartAmplitude = amplitude;
         }
-        newFrequency = Mathf.Clamp(swipeStartFrequency + data.frequencyAdd, 0.5f, Mathf.PI);
+        newFrequency = Mathf.Clamp(swipeStartFrequency + data.frequencyAdd, 0.2f, Mathf.PI);
         newAmplitude = Mathf.Clamp(swipeStartAmplitude + data.amplitudeAdd, 0.3f, 4);
     }
 }

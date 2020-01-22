@@ -4768,9 +4768,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd4578d4d24e783488aa7d1661c63658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.02
-  ringOfDoomSpeedIncrease: 0.01
-  ringOfBloomSpeedDecrease: -0.002
+  moveSpeed: 0.015
+  ringOfDoomSpeedIncrease: 0.015
+  ringOfBloomSpeedDecrease: -0.005
 --- !u!54 &8764247268863299767
 Rigidbody:
   m_ObjectHideFlags: 0
